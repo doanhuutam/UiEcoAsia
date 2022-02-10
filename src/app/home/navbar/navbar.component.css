@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  width: 100%;
+  list-style: none;
+  margin-left: 110px;
+}
+
+a {
+  text-decoration: none;
+  color: #f7f8f9;
+  /*display: inline-block;*/
+}
+.container {
+  margin: 0px auto;
+  max-width: 960px;
+}
+
+.inner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul#main-menu {
+  display: flex;
+}
+
+ul#main-menu li {
+  text-transform: uppercase;
+  padding: 10px 40px;
+  color: white;
+  display: block;
+  font-weight: bold;
+  position: relative;
+}
+
+ul#main-menu > li:hover > a {
+  color: lightgreen;
+  font-weight: bold;
+  /*background: #f4f4f4;*/
+  /*display: inline-block;*/
+  /*line-height: 40px;*/
+}
+
+#main-menu li:hover .subnav {
+  display: inline-block;
+  background: #000000A6;
+}
+
+.logo {
+  color: green;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+
+}
+
+.subnav {
+  display: none;
+  position: absolute;
+  min-width: 300px;
+  top: 40px;
+  left: -100px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #f5f5d5;
+  padding: 20px 0px;
+  transition: all 0.5s;
+  background: black;
+  color: #f4f4f4;
+}
+
+header.sticky {
+  background: #000000A6;
+  opacity: 0.9;
+  color: white;
+
+}
+
+header.sticky #main-menu li {
+  color: white;
+
+}
+
+header.sticky .logo {
+  color: green;
+
+}
+

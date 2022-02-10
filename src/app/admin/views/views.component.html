@@ -1,0 +1,121 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+      <mat-card>
+        <!--        form css bên css của views-->
+        <div id="hey">
+          <form class="form-inline my-2 my-lg-0" (ngSubmit)="getProduct1()" >
+            <button  class="btn-outline-success" type="button" name="add" (click)="addProduct()" > <mat-icon>dashboard_customize</mat-icon></button>
+            <input class="form-control mr-sm-9" type="text" placeholder="Search Product" [(ngModel)]="name" name="name"  >
+            <button class="btn-outline-success" type="submit"><mat-icon>find_in_page</mat-icon></button>
+          </form>
+        </div>
+
+        <mat-card-content>
+          <div class="bootstrap-wrapper">
+            <div class="container">
+              <div class="container text-center">
+                <h1 class="mt20" >Bảng Quản Lý</h1>
+              </div>
+              <div class="row">
+                <div class="col-md-8 offset-md-1">
+                  <!--                  sử dụng datasouce để lấy dữ liệu của bảng áp dụng với phân trang angular-->
+                  <table mat-table [dataSource]="dataSource">
+
+                    <!-- Số Thứ Tự Column -->
+                    <ng-container matColumnDef="id">
+                      <!--                      tiêu đề và nội dụng theo phân trang angular-->
+                      <th mat-header-cell *matHeaderCellDef> Số Thứ Tự</th>
+                      <td mat-cell *matCellDef="let element;let i =index"> {{i + 1}} </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="name">
+                      <!--                      tiêu đề và nội dụng theo phân trang angular-->
+                      <th mat-header-cell *matHeaderCellDef> Tên Sản Phẩm</th>
+                      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                    </ng-container>
+
+                    <!-- Hình Ảnh Column -->
+                    <ng-container matColumnDef="img">
+                      <!--                      tiêu đề và nội dụng theo phân trang angular-->
+                      <th mat-header-cell *matHeaderCellDef> Hình Ảnh</th>
+                      <td mat-cell *matCellDef="let element"><img width="100px" height="80px" src="{{element.img}}" ></td>
+                    </ng-container>
+
+                    <!-- Price Column -->
+                    <ng-container matColumnDef="price">
+                      <!--                      tiêu đề và nội dụng theo phân trang angular-->
+                      <th mat-header-cell *matHeaderCellDef> Giá Sản Phẩm</th>
+                      <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+                    </ng-container>
+                    <!-- Npp Column -->
+                    <ng-container matColumnDef="npp">
+                      <!--                      tiêu đề và nội dụng theo phân trang angular-->
+                      <th mat-header-cell *matHeaderCellDef> Mô Tả Sản Phẩm</th>
+                      <td mat-cell *matCellDef="let element"> {{element.npp}} </td>
+                    </ng-container>
+                    <!-- Edit Column -->
+                    <ng-container matColumnDef="edit">
+                      <!--                      tiêu đề và nội dụng theo phân trang angular-->
+                      <th mat-header-cell *matHeaderCellDef> Chỉnh Sửa</th>
+                      <td mat-cell *matCellDef="let element">
+                        <button (click)="editProduct(element.id)">
+                          <mat-icon class="btn-outline-dark">edit_note</mat-icon>
+                        </button>
+                      </td>
+                    </ng-container>
+                    <!-- Remove Column -->
+                    <ng-container matColumnDef="remove">
+                      <th mat-header-cell *matHeaderCellDef> Xoá</th>
+                      <td mat-cell *matCellDef="let element">
+                        <!--                        <button (click)="openConfirm(element.id)">-->
+                        <!--&lt;!&ndash;                          css btn outline chú ý &ndash;&gt;-->
+                        <!--                        </button>-->
+                        <button type="button"  data-toggle="modal" data-target="#exampleModal" (click)="getIdProduct(element.id)">
+                          <mat-icon class="btn-outline-danger">delete_sweep</mat-icon>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h2 class="modal-title" id="exampleModalLabel" f>Thông Báo</h2>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body" style="font-size: 24px">
+                                You are sure?
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal" style="font-size: 20px">Close</button>
+                                <button type="button" class="btn btn-primary" (click)="deleteProduct()" style="font-size: 20px; background: red">Delete</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </ng-container>
+                    <!--                    đoạn này là phân trang bên html -->
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+
+                  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                                 showFirstLastButtons
+                                 aria-label="Select page of periodic elements">
+                  </mat-paginator>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-actions class="text-center">
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

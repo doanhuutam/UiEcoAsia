@@ -1,0 +1,64 @@
+<div class="container-fluid" style="padding-top: 80px">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+      <mat-card>
+        <mat-card-content>
+          <div class="bootstrap-wrapper">
+            <div class="container">
+              <div class="container text-center">
+                <h1 class="mt20" style="padding-right: 250px">Thêm Sản Phẩm</h1>
+              </div>
+              <div class="row">
+                <div class="col-md-8 offset-md-1">
+
+                  <form (ngSubmit)="submit()">
+                    <!--tên sản phẩm -->
+                    <mat-form-field class="w-100" appearance="fill">
+                      <mat-label >Tên Sản Phẩm</mat-label>
+                      <input
+                        type="text"
+                        name="name"
+                        matInput
+                        placeholder="Enter here"
+                        [(ngModel)]="form.name"
+                        required>
+                    </mat-form-field>
+                    <mat-form-field class="w-100" appearance="fill">
+                      <mat-label>Giá Sản Phẩm</mat-label>
+                      <input
+                        name="price"
+                        matInput
+                        placeholder="Enter here"
+                        [(ngModel)]="form.price"
+                        required>
+                    </mat-form-field>
+
+                    <mat-form-field class="w-100" appearance="fill">
+                      <mat-label>Mô Tả Sản Phẩm</mat-label>
+                      <input
+                        name="npp"
+                        matInput
+                        placeholder="Enter here"
+                        [(ngModel)]="form.npp"
+                        required>
+                    </mat-form-field>
+                  </form>
+                  <th style="padding: 15px">Hình Ảnh Sản Phẩm</th>
+                  <app-upload-file (giveURLtoCreate)="uploadFile($event)"></app-upload-file>
+                  <div class="container text-center">
+                    <button class="mt30" style="margin-right: 450px" mat-raised-button (click)="submit()" >Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-actions class="text-center">
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+

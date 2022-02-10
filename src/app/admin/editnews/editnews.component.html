@@ -1,0 +1,68 @@
+<div class="container-fluid" style="padding-top: 80px">
+  <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+      <mat-card>
+        <mat-card-content>
+          <div class="bootstrap-wrapper">
+            <div class="container">
+              <div class="container text-center">
+                <h1 class="mt20" style="padding-right: 370px">Bảng Chỉnh Sửa</h1>
+              </div>
+              <div class="row">
+                <div class="col-md-8 offset-md-1">
+
+                  <form >
+                    <!--tên sản phẩm -->
+                    <mat-form-field class="w-100" appearance="fill">
+                      <mat-label>Tiêu Đề Tin Tức</mat-label>
+                      <input
+                        type="text"
+                        name="names"
+                        matInput
+                        placeholder="Enter here"
+                        [(ngModel)]="product.title"
+                        required>
+                    </mat-form-field>
+                    <!--                    Hình Ảnh sản phẩm -->
+                    <!--                    <mat-form-field class="w-100" appearance="fill">-->
+                    <!--                    </mat-form-field>-->
+                    <!--                    Giá sản phẩm -->
+                    <mat-form-field class="w-100" appearance="fill">
+                      <mat-label>Đường Dẫn Tin Tức</mat-label>
+                      <input
+                        name="price"
+                        matInput
+                        placeholder="Enter here"
+                        [(ngModel)]="product.url"
+                        required>
+                    </mat-form-field>
+                    <!--Npp sản phẩm -->
+                    <mat-form-field class="w-100" appearance="fill">
+                      <mat-label>Khái Quát Tin Tức</mat-label>
+                      <input
+                        name="npp"
+                        matInput
+                        placeholder="Enter here"
+                        [(ngModel)]="product.description"
+                        required>
+                    </mat-form-field>
+                  </form>
+                  <th>Hình Ảnh</th>
+                  <img width="100px" height="80px" src="{{product.img}}" name="hey">
+                  <app-upload-file (giveURLtoCreate)="edit($event)"></app-upload-file>
+                  <div class="container text-center">
+                    <button mat-raised-button name="edit"  style="margin-right: 450px" (click)="submit()" class="mt30">Update</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-card-content>
+        <mat-card-actions class="text-center">
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,121 @@
+<link rel="stylesheet" href="news-user.component.css">
+<div id="banner">
+</div>
+<div class="hihi">
+  <h2
+    style="font-size: 30px;font-weight: bold;margin-left: 600px; padding-top:60px;color:limegreen; border-bottom: 2px solid limegreen;margin-right: 560px;text-transform: uppercase ">
+    Tin Tức Mới Nhất</h2>
+<!--  <div class="slider">-->
+<!--    <div class="slider-img">-->
+
+<!--        <img width="100%"  src="https://ecoit.asia/wp-content/uploads/2021/07/digi-biz-1.png" alt="img1" class="a1">-->
+<!--        <img src="assets/k2.jpeg" alt="img2" class="a2">-->
+<!--        <img src="assets/k3.jpeg" alt="img3" class="a3">-->
+
+<!--    </div>-->
+
+<!--    <div class="automatic">-->
+<!--      <div class="auto-btn1"></div>-->
+<!--      <div class="auto-btn2"></div>-->
+<!--      <div class="auto-btn3"></div>-->
+<!--    </div>-->
+
+
+<!--    </div>-->
+<!--  </div>-->
+  <div class="clas1">
+<div class="news-new">
+  <input type="radio" name="inputslider" id="img1">
+  <input type="radio" name="inputslider" id="img2">
+  <input type="radio" name="inputslider" id="img3">
+        <img src="https://ecoit.asia/wp-content/uploads/2021/07/digi-biz-1.png" alt="img1" class="a1">
+<!--      <div class="title">-->
+<!--        <a href="#">Ra mắt thành viên trong “Hệ sinh thái của ECOIT”- Công ty CP công nghệ số DIGIBIZ-->
+<!--        </a>-->
+<!--      <div class="content">-->
+<!--        <p>ECOIT vui mừng chào đón thành viên mới gia nhập hệ sinh thái của-->
+<!--          ECOIT l- công ty Cổ phần công nghệ số DIGIBIZ-->
+<!--        </p>-->
+<!--      </div>-->
+<!--      </div>-->
+    <img src="https://ecoit.asia/wp-content/uploads/2021/04/pacground.jpg" alt="img2" class="a2">
+<!--    <div class="title">-->
+<!--      <a href="#">Ra mắt thành viên trong “Hệ sinh thái của ECOIT”- Công ty CP công nghệ số DIGIBIZ-->
+<!--      </a>-->
+<!--      <div class="content">-->
+<!--        <p>ECOIT vui mừng chào đón thành viên mới gia nhập hệ sinh thái của-->
+<!--          ECOIT l- công ty Cổ phần công nghệ số DIGIBIZ-->
+<!--        </p>-->
+<!--      </div>-->
+<!--    </div>-->
+    <img src="https://ecoit.asia/wp-content/uploads/2021/12/Tong-Giam-Doc-Nguyen-Dinh-Hai-Cong-ty-Co-phan-EcoIT-ky-thoa-thuan-hop-tac.jpg" alt="img3" class="a3">
+<!--    <div class="title">-->
+<!--      <a href="#">Ra mắt thành viên trong “Hệ sinh thái của ECOIT”- Công ty CP công nghệ số DIGIBIZ-->
+<!--      </a>-->
+<!--      <div class="content">-->
+<!--        <p>ECOIT vui mừng chào đón thành viên mới gia nhập hệ sinh thái của-->
+<!--          ECOIT l- công ty Cổ phần công nghệ số DIGIBIZ-->
+<!--        </p>-->
+<!--      </div>-->
+  </div>
+
+  <div class="labelslider">
+    <label for="img1"></label>
+    <label for="img2"></label>
+    <label for="img3"></label>
+    <div class="clear"></div>
+
+  </div>
+  </div>
+
+
+
+
+
+
+  <div class="places-list">
+    <div class="place-item" *ngFor="let i of news">
+      <img src="{{i.img}}" class="place-img">
+      <div class="place-body">
+        <a href="{{i.url}}" class="heading" target="_blank">{{i.title}}</a>
+        <p class="dess">{{i.description}}</p>
+        <div class="lkl">
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button" style="color:#000;">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button " style="color:#000;">
+            <i class="fab fa-twitter"></i>
+          </a>
+
+          <!-- Google -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button" style="color:#000;">
+            <i class="fab fa-google"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button" style="color:#000;">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="clear"></div>
+    <mat-paginator [length]="totalEleMent"
+                   [pageSizeOptions]="[3, 6, 9, 12]"
+                   aria-label="Select page"
+                   (page)="nextPage($event)"
+                   style="font-size: 15px;margin-bottom: 22px">
+
+
+    </mat-paginator>
+    <!--  -->
+  </div>
+
+
+</div>
+<app-footer></app-footer>
+
+

@@ -1,0 +1,42 @@
+#banner {
+  margin-top: 80px;
+  background: url("https://ecoit.asia/wp-content/uploads/2019/08/banner-gioi-thi%E1%BB%87u-v2-.jpg");
+  height: 250px;
+  max-width: 1455px;
+  /*background-size: cover;*/
+}
+
+img {
+  width: 800px;
+  height: 830px;
+}
+
+.content {
+  width: 70%;
+  /*border: 2px solid black;*/
+  margin-left: 100px;
+  float: left;
+}
+.hihi{
+  width: 100%;
+
+}
+.content1{
+  width: 20%;
+  padding-left: 40px;
+  padding-top: 40px;
+}
+.content,.content1 {
+  float: left;
+}
+p{
+  /*font-weight: bold;*/
+  line-height: 1.75;
+}
+h3{
+  font-weight: bold;
+  font-size: 20px;
+  color: limegreen;
+  margin-bottom: 20px;
+}
+

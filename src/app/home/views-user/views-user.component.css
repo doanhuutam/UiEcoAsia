@@ -1,0 +1,198 @@
+h2 {
+  margin: auto;
+  padding-left: 400px;
+  font-weight: bold;
+  padding-top: 30px;
+  color: #50B848;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+
+.boxdad {
+  width: 100%;
+  padding-top: 40px;
+}
+.row{
+  padding-top: 40px;
+}
+.col{
+  padding-top: 20px;
+  background: #f4f4f4;
+  padding-bottom: 20px;
+
+}
+.nav{
+  display: none;
+  position: absolute;
+  /*min-width: 300px;*/
+  /*top: 70px;*/
+  /*left: -12px;*/
+  background: white;
+}
+.blog_background{
+  /*background: url("../assets/m2.jpeg");*/
+  position: relative;
+
+}
+
+.box1 {
+  background: #f4f4f4;
+  width: 22%;
+  height: 340px;
+  margin: 16px;
+  box-sizing: border-box;
+  float: left;
+}
+
+
+.img {
+  width: 100%;
+  color: black;
+  font-size: 64px;
+  padding-top: 10px;
+  display: block;
+  text-align: center;
+}
+
+.color {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  line-height: 100px;
+  margin-top: -70px;
+  text-align: center;
+  background-color: #009cff;
+  color: #fff;
+  margin-bottom: 30px;
+  border-radius: 50%;
+}
+.color:hover{
+
+}
+
+
+.box1__title {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+
+
+}
+
+.box1__content {
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+
+}
+
+.box1__note {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #50B848;
+
+}
+
+.container + .container {
+  padding-top: 50px;
+}
+.imgsp{
+  max-width: 100%;
+}
+.spcl .sp img{
+  width: 115px;
+
+}
+.spcll .sp img{
+  width: 115px;
+
+}
+.spcl{
+  width: 100%;
+  text-align: center;
+
+}
+.spcll{
+  /*background: #f4f4f4;*/
+  width: 18%;
+  height: 200px;
+  float: left;
+  margin-right: 10px;
+  display: inline-block;
+  border: 5px solid #f4f4f4;
+}
+.sp{
+  width: 22%;
+  /*background: #f4f4f4;*/
+  height: 230px;
+  margin: 1px;
+  box-sizing: border-box;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+}
+.content{
+  text-align: center;
+}
+h3{
+  font-weight: bold;
+}
+.slider {
+  max-width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 40px;
+  /*position: absolute;*/
+  /*left: 80%;*/
+  /*transform: translate(-50%, -50%);*/
+
+}
+.slider-img{
+  display: flex;
+}
+.slider-img img{
+  width: 100%;
+}
+.slider-img input{
+  display: none;
+}
+.labler{
+  display: flex;
+  justify-content: center;
+}
+.labler label{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 3px solid red;
+  margin: 2px;
+}
+.labler label:hover{
+  background: white;
+}
+
+#slider1:checked ~ .a1 {
+  margin-left: -91%;
+}
+#slider2:checked ~ .a2 {
+  margin-left: -200%;
+}
+#slider3:checked ~ .a3 {
+  margin-left: -300%;
+}
+a{
+  color: #50B848;
+}
+#banner {
+  background: url("https://ecoit.asia/wp-content/uploads/2019/08/trangchuECMp2-min.png");
+  height: 600px;
+  max-width: 100%;
+  background-size: cover;
+}
